@@ -7,6 +7,8 @@
 #include <immintrin.h>
 #include <stdint.h>
 
+#define RH_PI atan(1)*4
+
 typedef struct vec3f_s {
     float x;
     float y;
@@ -28,6 +30,14 @@ typedef struct vec2i_s {
     uint32_t x;
     uint32_t y;
 } vec2i_t;
+
+float rad_to_deg(float rad) {
+    return (rad * (180 / RH_PI)); // thanks WikiHow
+}
+
+float deg_to_rad(float deg) {
+    return (deg * (180 / RH_PI)); // thanks WikiHow
+}
 
 float rh_sqrt(float x) { // pretty good, ngl
     __m128 src = _mm_set1_ps(x);

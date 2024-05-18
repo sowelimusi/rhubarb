@@ -8,6 +8,7 @@
 #include <stdint.h>
 
 #define RH_PI atan(1)*4
+#define RH_MAG 0x0001B97F
 
 typedef struct vec3f_s {
     float x;

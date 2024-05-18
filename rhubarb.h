@@ -152,15 +152,15 @@ float vec3f_dotproduct(vec3f_t vec_a, vec3f_t vec_b) {
 }
 
 int vec3i_dotproduct(vec3i_t vec_a, vec3i_t vec_b) {
-    return vec_a.x*vec_b.x + vec_a.y*vec_b.y + vec_a.z*vec_a.z; // product of dot
+    return vec_a.x*vec_b.x + vec_a.y*vec_b.y + vec_a.z*vec_a.z;
 }
 
 float vec2f_dotproduct(vec2f_t vec_a, vec2f_t vec_b) {
-    return vec_a.x*vec_b.x + vec_a.y*vec_b.y; // product of dot
+    return vec_a.x*vec_b.x + vec_a.y*vec_b.y;
 }
 
 int vec2i_dotproduct(vec2i_t vec_a, vec2i_t vec_b) {
-    return vec_a.x*vec_b.x + vec_a.y*vec_b.y; // product of dot
+    return vec_a.x*vec_b.x + vec_a.y*vec_b.y;
 }
 
 vec3f_t vec3f_add(vec3f_t vec_a, vec3f_t vec_b) {

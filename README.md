@@ -1,8 +1,11 @@
+
 # Rhubarb
 
-> Barbras Rhubarb Bar Barbarians Beard Barber Shop
+![](./rhubarblogo.png)
 
-This is a C ath library that I made because screw you learnopengl, I'm not using C++.
+> Barbara's Rhubarb Bar Barbarian Beard Barber Beer Bar
+
+This is a C math library that I made because screw you learnopengl, I'm not using C++.
 
 ## Using
 

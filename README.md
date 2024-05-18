@@ -1,7 +1,7 @@
 
 # Rhubarb
 
-![](./rhubarblogo.png)
+![Fumo plush with German text reading "Barbara's Rhubarb Bar Barbarian Beard Barber Beer Bar"](./rhubarblogo.png)
 
 > Barbara's Rhubarb Bar Barbarian Beard Barber Beer Bar
 

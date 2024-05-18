@@ -36,7 +36,7 @@ float rad_to_deg(float rad) {
 }
 
 float deg_to_rad(float deg) {
-    return (deg / (180 * RH_PI));
+    return (deg / (180 * RH_PI)); // maybe I shouldn't have written this when I was sick
 }
 
 float rh_sqrt(float x) { // pretty good, ngl

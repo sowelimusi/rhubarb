@@ -10,6 +10,7 @@
 #define RH_PI atan(1)*4
 #define RH_MAG 0x0001B97F
 
+// ====================================
 typedef struct vec3f_s {
     float x;
     float y;
@@ -31,7 +32,9 @@ typedef struct vec2i_s {
     uint32_t x;
     uint32_t y;
 } vec2i_t;
+// ====================================
 
+// ====================================
 float rad_to_deg(float rad) {
     return (rad * (180 / RH_PI)); // thanks WikiHow
 }
@@ -39,7 +42,9 @@ float rad_to_deg(float rad) {
 float deg_to_rad(float deg) {
     return (deg / (180 * RH_PI)); // maybe I shouldn't have written this when I was sick
 }
+// ====================================
 
+// ====================================
 float rh_sqrt(float x) { // pretty good, ngl
     __m128 src = _mm_set1_ps(x);
     __m128 dest = _mm_sqrt_ps(src);
@@ -55,7 +60,9 @@ float rsqrt(float x) {
     _mm_storeu_ps(arr, dest);
     return arr[0]; // they're all the same 
 }
+// ====================================
 
+// ====================================
 float vec3f_len(vec3f_t vec) {
     return rh_sqrt((vec.x * vec.x) + (vec.y * vec.y) + (vec.z * vec.z));
 }
@@ -71,7 +78,9 @@ float vec2f_len(vec2f_t vec) {
 int vec2i_len(vec2i_t vec) {
     return rh_sqrt((float)(vec.x * vec.x) + (float)(vec.y * vec.y));
 }
+// ====================================
 
+// ====================================
 void vec3f_norm(vec3f_t vec) {
     float len = vec3f_len(vec); // dont ask me how i did, i just did it, it was hard
     float rlen = rsqrt(len);
@@ -101,7 +110,9 @@ void vec2i_norm(vec2i_t vec) {
     vec.x = vec.x * rlen;
     vec.y = vec.y * rlen;
 }
+// ====================================
 
+// ====================================
 int vec3f_comp(vec3f_t vec_a, vec3f_t vec_b) {
     if(vec_a.x != vec_b.x)
         return 0;
@@ -147,7 +158,9 @@ int vec2i_comp(vec2i_t vec_a, vec2i_t vec_b) {
     
     return 1;
 }
+// ====================================
 
+// ====================================
 float vec3f_dotproduct(vec3f_t vec_a, vec3f_t vec_b) {
     return vec_a.x*vec_b.x + vec_a.y*vec_b.y + vec_a.z*vec_a.z; // product of dot
 }
@@ -163,7 +176,9 @@ float vec2f_dotproduct(vec2f_t vec_a, vec2f_t vec_b) {
 int vec2i_dotproduct(vec2i_t vec_a, vec2i_t vec_b) {
     return vec_a.x*vec_b.x + vec_a.y*vec_b.y;
 }
+// ====================================
 
+// ====================================
 vec3f_t vec3f_add(vec3f_t vec_a, vec3f_t vec_b) {
     vec3f_t out;
     out.x = vec_a.x + vec_b.x;
@@ -193,7 +208,9 @@ vec2i_t vec2i_add(vec3i_t vec_a, vec3i_t vec_b) {
     out.y = vec_a.y + vec_b.y;
     return out;
 }
+// ====================================
 
+// ====================================
 vec3f_t vec3f_sub(vec3f_t vec_a, vec3f_t vec_b) {
     vec3f_t out;
     out.x = vec_a.x - vec_b.x;
@@ -223,7 +240,9 @@ vec2i_t vec2i_sub(vec2i_t vec_a, vec2i_t vec_b) {
     out.y = vec_a.y - vec_b.y;
     return out;
 }
+// ====================================
 
+// ====================================
 void vec3f_copy(vec3f_t vec_a, vec3f_t vec_b) {
     vec_b.x = vec_a.x;
     vec_b.y = vec_a.y;
@@ -245,11 +264,13 @@ void vec2i_copy(vec2i_t vec_a, vec2i_t vec_b) {
     vec_b.x = vec_a.x;
     vec_b.y = vec_a.y;
 }
+// ====================================
 
 // did i ever tell you
 // what the definiition
 // of insanity is?
 
+// ====================================
 void vec3f_inv(vec3f_t vec) {
     vec.x = -vec.x;
     vec.y = -vec.y;
@@ -271,3 +292,4 @@ void vec2i_inv(vec2i_t vec) {
     vec.x = -vec.x;
     vec.y = -vec.y;
 }
+// ====================================
